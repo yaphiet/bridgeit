@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 const session = require('express-session');
+const passport = require('passport');
 var logger = require('morgan');
 
 //COnfigures dotenv
@@ -11,6 +12,8 @@ require('dotenv').config();
 //Require the database config file (connect to DB)
 require('./config/database');
 
+//Require passport
+require('./config/passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -24,12 +27,17 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 //Session setup
 app.use(session({
   secret: 'lukeIAmYourFather', //SHOULD I CHANGE THIS?
   resave: false,
   saveUninitialized: true
 }))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
