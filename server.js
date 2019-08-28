@@ -2,18 +2,23 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-const session = require('express-session');
-const passport = require('passport');
+
+//Configures dotenv
+require('dotenv').config();
+
+
+var session = require('express-session');
+var passport = require('passport');
+
 var logger = require('morgan');
 
-//COnfigures dotenv
-require('dotenv').config();
 
 //Require the database config file (connect to DB)
 require('./config/database');
 
 //Require passport
 require('./config/passport');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -21,7 +26,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());

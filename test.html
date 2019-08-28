@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bridge·It</title>
+    <style>
+*{box-sizing: border-box;}
+body{ margin: 0;
+ font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana," sans-serif";
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #333;
+	overflow-x: hidden;
+}
+
+.video-header{height: 100vh;
+         display: flex;
+	     align-items: center;
+	     color: #fff;
+	
+}
+
+.wrap{
+	max-width: 960px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin:auto;
+	text-align: center;
+	
+}
+.fullscreen-video-wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	
+}
+.fullscreen-video-wrap video{
+	min-height: 100%;
+	min-width: 100%;
+	
+}
+
+.header-overlay{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(34,33,33,0.65);
+	opacity: 0.80;
+	
+}
+
+.header-content{
+	z-index: 2;
+	margin-top:20%;
+	padding: 0 5rem;
+	
+}
+
+.header-content h1{
+	font-size: 50px;
+	margin-bottom: 0;
+	
+}
+.header-content p{
+	font-size: 1.5rem;
+	display: block;
+	padding-bottom: 2rem;
+	margin-top: 10px;
+}
+
+.my-btn{
+	padding: 1rem 1rem;
+}
+
+@media(max-width:768px){
+	.header-content h1{font-size: 40px;}
+	.header-content p{font-size: 1rem;}
+}
+
+section{text-align: center; margin-top: 50px; font-size: 1.5rem;}
+
+
+    </style>
+</head>
+<body>
+    <div class="video-header wrap">
+      <div class="fullscreen-video-wrap">
+        <video src="landing video.mp4" autoplay loop></video>
+      </div>
+      <div class="header-overlay">
+        <a class="btn btn-success my-btn mt-4"></a>
+      </div>
+   
+    </div> <!--closing tag-->>
+    <ul class="right">
+        <li>
+        <% if (user) { %>
+          <a href="/logout">Log Out</a>
+        <% } else { %>
+          <a href="/auth/google">Login with Google</a>
+        <% } %>
+        </li>
+      </ul> 
+</body>
+
+</html>
