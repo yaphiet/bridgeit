@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<section class="editor">
+    <form action="/events/<%= event._id %>/edit" method="GET" class="secondary-content">
+        <button type="submit" class="btn-update">Edit</button>
+    </form>
+    <form action="/events/<%= product._id %>?_method=DELETE" method="POST" class="secondary-content">
+        <button type="submit" class="btn-delete">Delete</button>
+    </form>
+</section>
+
+
+<img class="pimg" src="/images/<%= event.image %>">
+<section id="show-page">
+    <div>Price: </div>
+    <div>$<%= product.price %></div>
+    <div>Location: </div>
+    <div><%= product.location %></div>
+    <div>Description: </div>
+    <div><%= product.description %></div>
+</section>
+
+<br><br>
+
+
+
+<%- include('../partials/footer') %>

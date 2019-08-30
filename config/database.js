@@ -1,11 +1,12 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
+require('dotenv').config()
 
 mongoose.connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useCreateIndex: true
 });
 
 mongoose.connection.on('connected', function() {
     console.log(`Connected to MongoDB at ${process.env.DATABASE_URL}`);
 });
 
-module.exports = mongoose;

@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<ul class="grid" id="list">
+    <% events.forEach(function(m) { %>
+    <li>
+        <figure class="grid__figure">
+            <div class="fimg"><a href="/events/<%= m._id %>"><img src="/images/<%= m.image %>"></a></div>
+            <div class="fig"><%= m.name %></div>
+            <div class="fig">$<%= m.price %></div>
+            <div class="fig"><a href="/events/<%= m._id %>">Event Details</a></div>
+        </figure>
+    </li>
+    <% }); %>
+</ul>
+<%- include('../partials/footer') %>

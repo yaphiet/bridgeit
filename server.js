@@ -2,16 +2,13 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var session = require('express-session');
+var passport = require('passport');
+var methodOverride = require('method-override');
 
 //Configures dotenv
 require('dotenv').config();
-
-
-var session = require('express-session');
-var passport = require('passport');
-
-var logger = require('morgan');
-
 
 //Require the database config file (connect to DB)
 require('./config/database');
@@ -35,14 +32,13 @@ app.use(cookieParser());
 
 //Session setup
 app.use(session({
-  secret: 'lukeIAmYourFather', //SHOULD I CHANGE THIS?
+  secret: 'yoMama', 
   resave: false,
   saveUninitialized: true
 }))
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
