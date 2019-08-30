@@ -10,7 +10,7 @@
 
 ## Technologies Used
 
-Node.js, Express, Bootstrap, Mongoose, MongoDB, Photoshop, After Effects & Premiere Pro.
+Node.js, Express, Bootstrap, Mongoose, MongoDB, Google API, Photoshop, After Effects & Premiere Pro.
 
   
 

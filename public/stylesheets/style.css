@@ -245,3 +245,8 @@ h6 {
   background-color: rgba(27, 70, 99, .5);
   margin: 30px;
 }
+
+.centerText {
+  font-size: .7em;
+  text-shadow: 1em white;
+}

@@ -10,6 +10,11 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/', function(req, res) {
+  res.redirect('/events');
+});
+
+
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google', {
