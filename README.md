@@ -5,7 +5,7 @@
 
 ## Screenshots
 
-  
+![Image of screenshot](https://i.imgur.com/zjW4nZo.png)  
   
 
 ## Technologies Used
@@ -21,3 +21,5 @@ Ready to meet amazing artists in your area? Start networking [today](https://bri
   
 
 ### Next Steps
+Integrate a map with custom markers that shows shows around you.
+Integrate Social Media.
