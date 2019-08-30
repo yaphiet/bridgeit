@@ -18,6 +18,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+//var eventsRouter = require('./routes/events');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+//app.get('/index' , function(req, res) { res.render('index');});
 //Session setup
 app.use(session({
   secret: 'yoMama', 

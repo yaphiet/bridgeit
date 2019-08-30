@@ -33,7 +33,7 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(id, done) {
-    Student.findById(id, function(err, student) {
-      done(err, student);
+    Event.findById(id, function(err, event) {
+      done(err, event);
     });
   });
