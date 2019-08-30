@@ -10,7 +10,7 @@
 
 ## Technologies Used
 
-Node.js, Express, Bootstrap, Photoshop, After Effects & Premiere Pro.
+Node.js, Express, Bootstrap, Mongoose, MongoDB, Photoshop, After Effects & Premiere Pro.
 
   
 
@@ -23,3 +23,4 @@ Ready to meet amazing artists in your area? Start networking [today](https://bri
 ### Next Steps
 Integrate a map with custom markers that shows shows around you.
 Integrate Social Media.
+Add ability to add to calendar.
