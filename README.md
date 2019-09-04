@@ -5,7 +5,7 @@
 
 ## Screenshots
 
-![Image of screenshot](https://i.imgur.com/zjW4nZo.png)  
+![Image of screenshot](https://i.imgur.com/AOXmeuk.png)  
 ![Image of screenshot](https://imgur.com/fpeIlcC.png)  
 ![Image of screenshot](https://imgur.com/5Ioi1UJ.png)  
 ![Image of screenshot](https://imgur.com/5RVkGEr.png)  
