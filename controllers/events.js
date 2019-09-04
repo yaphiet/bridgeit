@@ -1,4 +1,5 @@
-var Event = require('../models/event')
+var mongoose = require('mongoose');
+var Event = require('./../models/event.js')
 var User = require('../models/user')
 
 module.exports = {
@@ -40,7 +41,7 @@ function show(req, res) {
     Event.findById(req.params.id)
         .exec(function (err, event) {
             res.render('events/show', {
-              title: `${event}`,
+              title: `${event.name}`,
                 user: req.user,
                 event
             });
@@ -78,3 +79,4 @@ function update(req, res) {
         res.redirect(`/events`);
     })
 }
+
