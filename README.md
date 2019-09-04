@@ -6,6 +6,9 @@
 ## Screenshots
 
 ![Image of screenshot](https://i.imgur.com/zjW4nZo.png)  
+![Image of screenshot](https://imgur.com/fpeIlcC)  
+![Image of screenshot](https://imgur.com/5Ioi1UJ)  
+![Image of screenshot](https://imgur.com/5RVkGEr)  
   
 
 ## Technologies Used
