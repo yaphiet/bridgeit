@@ -2,10 +2,10 @@
 
 <section class="editor">
     <form action="/events/<%= event._id %>/edit" method="GET" class="secondary-content">
-        <button type="submit" class="btn-update">Edit</button>
+        <button type="submit" class="btn-update">EDIT</button>
     </form>
-    <form action="/events/<%= product._id %>?_method=DELETE" method="POST" class="secondary-content">
-        <button type="submit" class="btn-delete">Delete</button>
+    <form action="/events/<%= event._id %>?_method=DELETE" method="POST" class="secondary-content">
+        <button type="submit" class="btn-delete">DELETE</button>
     </form>
 </section>
 
@@ -13,15 +13,13 @@
 <img class="pimg" src="/images/<%= event.image %>">
 <section id="show-page">
     <div>Price: </div>
-    <div>$<%= product.price %></div>
+    <div>$<%= event.price %></div>
     <div>Location: </div>
-    <div><%= product.location %></div>
+    <div><%= event.location %></div>
     <div>Description: </div>
-    <div><%= product.description %></div>
+    <div><%= event.description %></div>
 </section>
 
 <br><br>
-
-
 
 <%- include('../partials/footer') %>

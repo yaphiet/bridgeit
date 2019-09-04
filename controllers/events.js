@@ -16,7 +16,7 @@ function index(req, res) {
         userId: req.user
     }, function (err, events) {
         res.render('events/index', {
-            title: 'Events',
+            title: 'Listings',
             user: req.user,
             events
         });
@@ -40,7 +40,7 @@ function show(req, res) {
     Event.findById(req.params.id)
         .exec(function (err, event) {
             res.render('events/show', {
-                title: `${event.name}`,
+              title: `${event}`,
                 user: req.user,
                 event
             });

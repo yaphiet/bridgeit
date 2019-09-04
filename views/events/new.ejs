@@ -1,14 +1,33 @@
 <%- include('../partials/header') %>
-<ul class="grid" id="list">
-    <% events.forEach(function(m) { %>
-    <li>
-        <figure class="grid__figure">
-            <div class="fimg"><a href="/events/<%= m._id %>"><img src="/images/<%= m.image %>"></a></div>
-            <div class="fig"><%= m.name %></div>
-            <div class="fig">$<%= m.price %></div>
-            <div class="fig"><a href="/events/<%= m._id %>">Event Details</a></div>
-        </figure>
-    </li>
-    <% }); %>
-</ul>
+<form id="new-form" action="/events" method="POST">
+    <label>Event Name:</label>
+    <input type="text" name="name">
+    <label>Price:</label>
+    <input type="text" name="price">
+    <label>Location:</label>
+    <select name="location">
+        <option value="Parliament 
+        811 Washington st. 
+        Oakland, CA 94607">Parliament</option>
+        <option value="The New Parish
+        1743 San Pablo Ave
+        Oakland, CA 94612
+        ">The New Parish</option>
+        <option value="Era Art Bar & Lounge
+        19 Grand Ave
+        Oakland, CA 94610">Era Art Bar & Lounge</option>
+        <option value="Fox Theater
+        1807 Telegraph Ave
+        Oakland, CA 94612">The Fox Theater</option>
+        <option value="Starline Social CLub
+        2236 Martin Luther King Jr Way
+        Oakland, CA 94612">Starline Social Club</option>
+    </select>
+    <label>Description:</label>
+    <textarea name="description"></textarea>
+    <label>Photo:</label>
+    <input type="text" name="image">
+    <input class="submit" type="submit" value="Submit">
+</form>
+
 <%- include('../partials/footer') %>
